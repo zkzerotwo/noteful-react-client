@@ -81,7 +81,7 @@ class App extends Component {
 
 	}
 	renderMain() {
-		console.log(this.state)
+		// console.log(this.state)
 		return (
 			<div>
 				{['/', '/folder/:folderId'].map(path => (
@@ -110,7 +110,7 @@ class App extends Component {
 			addFolder: this.handleAddFolder,
 			addNote: this.handleAddNote
 		}
-		console.log(contextValue)
+		// console.log(contextValue)
 		// console.log("I'm here hello!")
 		// console.log(store)
 		return (

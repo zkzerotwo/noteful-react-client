@@ -12,7 +12,7 @@ class FolderListSide extends React.Component {
 
     render() {
         const { folders = [], notes = [] } = this.context
-        console.log(this.context)
+        // console.log(this.context)
         return (
             <div className='FolderListSide'>
                 <ul className='FolderListSide__list'>

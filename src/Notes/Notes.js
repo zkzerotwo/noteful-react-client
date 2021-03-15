@@ -37,7 +37,7 @@ export default class Notes extends React.Component {
     }
     render() {
         const { name, id, modified } = this.props;
-        console.log(modified)
+        console.log(this.props)
         return (
             <div className='Notes'>
                 <h2 className='Notes__title'>
@@ -69,6 +69,6 @@ export default class Notes extends React.Component {
 
 Notes.propTypes = {
     modified: PropTypes.string,
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
 }
