@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FolderListSide component renders a .FolderListSide by default 1`] = `
+<div
+  className="FolderListSide"
+>
+  <ul
+    className="FolderListSide__list"
+  />
+  <div
+    className="FolderListSide__button-wrapper"
+  >
+    <NavCircleButton
+      className="FolderListSide__add-folder-button"
+      tag={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "propTypes": Object {
+            "innerRef": [Function],
+            "onClick": [Function],
+            "replace": [Function],
+            "target": [Function],
+            "to": [Function],
+          },
+          "render": [Function],
+        }
+      }
+      to="/add-folder"
+      type="button"
+    >
+      Add Folder +
+    </NavCircleButton>
+  </div>
+</div>
+`;
+
+exports[`FolderListSide component renders a link in ul for each folder in array 1`] = `
+<ul
+  className="FolderListSide__list"
+/>
+`;

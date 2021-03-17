@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteListSide component renders a .NoteListSide by default 1`] = `
+<div
+  className="NoteListSide"
+>
+  <NavCircleButton
+    className="NoteListSide__back-button"
+    onClick={[Function]}
+    role="link"
+    tag="button"
+  >
+    <br />
+    Back
+  </NavCircleButton>
+</div>
+`;
+
+exports[`NoteListSide component renders a h3 with folder name when in props 1`] = `null`;

@@ -1,8 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme'
+import  Enzyme  from 'enzyme'
 import toJson from 'enzyme-to-json'
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import FolderListSide from './FolderListSide'
 
+Enzyme.configure({ adapter: new Adapter() });
 describe(`FolderListSide component`, () => {
     const props = {
         notes: [

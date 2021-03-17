@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteListMain component renders a .NoteListMain by default 1`] = `
+<section
+  className="NoteListMain"
+>
+  <Notes
+    onDeleteNote={[Function]}
+  />
+  <div
+    className="NoteListMain__content"
+  >
+    <p
+      key="0"
+    />
+  </div>
+</section>
+`;
+
+exports[`NoteListMain component renders a Note with note prop 1`] = `null`;
+
+exports[`NoteListMain component splits the content by \\n or \\n\\r, with a p foreach 1`] = `null`;
+
+exports[`NoteListMain component splits the content by \\n or \\n\\r, with a p foreach 2`] = `null`;

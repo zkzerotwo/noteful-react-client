@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FoldersListMain component renders a .FoldersListMain by default 1`] = `
+<section
+  className="FoldersListMain"
+>
+  <ul />
+  <div
+    className="FoldersListMain__button-container"
+  >
+    <NavCircleButton
+      className="FoldersListMain__add-note-button"
+      tag={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "propTypes": Object {
+            "innerRef": [Function],
+            "onClick": [Function],
+            "replace": [Function],
+            "target": [Function],
+            "to": [Function],
+          },
+          "render": [Function],
+        }
+      }
+      to="/add-note"
+      type="button"
+    >
+      Add Note +
+    </NavCircleButton>
+  </div>
+</section>
+`;
+
+exports[`FoldersListMain component renders a Note in ul for each notes in array 1`] = `<ul />`;
