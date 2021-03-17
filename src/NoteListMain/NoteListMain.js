@@ -23,8 +23,9 @@ class NoteListMain extends React.Component {
     render() {
         const { notes = [] } = this.context
         const { noteId } = this.props.match.params
+        console.log(notes, noteId, "looking for notes")
         const note = findNote(notes, noteId) || { content: '' }
-        console.log(notes)
+        console.log(notes, "notes in context")
         return (
             <section className='NoteListMain'>
                 <Notes

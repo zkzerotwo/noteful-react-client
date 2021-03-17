@@ -19,7 +19,9 @@ class FoldersListMain extends React.Component {
     render() {
         const { folderId } = this.props.match.params
         const { notes = [] } = this.context
+        console.log(folderId, notes, "looking for folders")
         const notesForFolder = getNotesForFolder(notes, folderId)
+        console.log(notesForFolder, "notes4fold")
         return (
             <section className='FoldersListMain'>
                 <ul>

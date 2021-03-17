@@ -59,7 +59,7 @@ class App extends Component {
 	renderSide() {
 		return (
 			<>
-				{['/', '/folder/:folderId'].map(path => (
+				{['/', '/folders/:folderId'].map(path => (
 					<Route
 						exact
 						key={path}
@@ -68,7 +68,7 @@ class App extends Component {
 					/>
 				))}
 				<Route
-					path="/note/:noteId"
+					path="/notes/:noteId"
 					component={NoteListSide}
 				/>
 				<Route
@@ -84,7 +84,7 @@ class App extends Component {
 		// console.log(this.state)
 		return (
 			<div>
-				{['/', '/folder/:folderId'].map(path => (
+				{['/', '/folders/:folderId'].map(path => (
 					<Route
 						exact
 						key={path}
@@ -93,7 +93,7 @@ class App extends Component {
 					/>
 				))}
 				<Route
-					path="/note/:noteId"
+					path="/notes/:noteId"
 					component={NoteListMain}
 				/>
 				<Route

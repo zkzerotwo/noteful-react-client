@@ -20,7 +20,7 @@ class FolderListSide extends React.Component {
                         <li key={folder.id}>
                             <NavLink
                                 className='FolderListSide__folder-link'
-                                to={`/folder/${folder.id}`}
+                                to={`/folders/${folder.id}`}
                             >
                                 <span className='FolderListSide__num-notes'>
                                     {countNotesForFolder(notes, folder.id)}
