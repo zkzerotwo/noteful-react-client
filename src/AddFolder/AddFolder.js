@@ -28,7 +28,7 @@ class AddFolder extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log("Howdy")
+        // console.log("Howdy")
         const { folderName } = e.target
         const folder = folderName.value
         console.log(folder)
@@ -46,7 +46,7 @@ class AddFolder extends React.Component {
             body: JSON.stringify(payload),
         })
             .then((foldersRes) => {
-                console.log(foldersRes)
+                // console.log(foldersRes)
                 if (!foldersRes.ok) {
                     return foldersRes.json().then(e => Promise.reject(e));
                 }

@@ -12,7 +12,7 @@ class AddNote extends React.Component {
                 value: '',
                 touched: false
             },
-            folderId: {
+            folder: {
                 value: '',
                 touched: false
             },
@@ -37,7 +37,7 @@ class AddNote extends React.Component {
 
     updateFolderId = (folderId) => {
         this.setState({
-            folderId: {
+            folder: {
                 value: folderId,
                 touched: true
             }
@@ -69,17 +69,19 @@ class AddNote extends React.Component {
         // console.log("Howdy")
         const note = this.state.name.value
         const content = this.state.content.value
-        const folderPick = this.state.folderId.value
+        const folderPick = this.state.folder.value
         console.log(note)
         let payload = {
             name: note,
             content: content,
-            folderId: folderPick
+            folder: folderPick
         }
-        console.log(payload)
+        console.log(payload, "I'm payload")
         this.setState({
             error: null
         })
+        console.log(config.API_ENDPOINT, config.API_KEY, "I'm credentials!")
+        this.props.history.push('/')
         fetch(`${config.API_ENDPOINT}/notes`, {
             method: 'POST',
             headers: {
@@ -87,12 +89,15 @@ class AddNote extends React.Component {
                 'Authorization': `Bearer ${config.API_KEY}`
             },
             body: JSON.stringify(payload),
+
         })
+
             .then((notesRes) => {
                 console.log(notesRes)
                 if (!notesRes.ok) {
                     return notesRes.json().then(e => Promise.reject(e));
                 }
+                console.log(payload)
                 return notesRes.json()
             })
             .then((newNote) => {
@@ -111,17 +116,17 @@ class AddNote extends React.Component {
         }
     }
     validateFolderSelect() {
-        const folderIsSelected = this.state.folderId.value;
+        const folderIsSelected = this.state.folder.value;
         return !folderIsSelected;
     }
     render() {
-        console.log(this.context)
+        console.log(this.context, "add note context")
         const folderList = this.context.folders.map(folder => {
             return (
                 <option key={folder.id} value={folder.id}>{folder.name}</option>
             )
         })
-        console.log(folderList)
+        // console.log(folderList)
         return (
             <section className='AddNote'>
                 <h2>Create a Note</h2>
